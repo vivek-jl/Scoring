@@ -12,6 +12,7 @@ struct ClearScoreEndpoint: EndpointType {
     var method: HTTPMethod = .get
     var subPath: String = "mockcredit/values"
     var headers: HTTPHeaders? = nil
+    var timeout: Double = 20
 
     func buildRequest(_ environment: ServerEnvironment) -> URLRequest {
         var components = URLComponents()
@@ -19,15 +20,6 @@ struct ClearScoreEndpoint: EndpointType {
         components.host = BaseURL.clearscoreBaseURL
         components.path = pathFor(environment: environment) + subPath
         components.queryItems = nil
-
-        guard let url = components.url else {
-            preconditionFailure("Invalid URL")
-        }
-
-        var urlRequest = URLRequest(url: url)
-        urlRequest.httpMethod = method.rawValue
-        urlRequest.timeoutInterval = 20
-
-        return urlRequest
+        return buildURLRequest(components: components)
     }
 }
