@@ -33,6 +33,7 @@
 		322DD52D27A2A73A00C7E88B /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 322DD52C27A2A73A00C7E88B /* Resolver */; };
 		322DD52F27A3C37A00C7E88B /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD52E27A3C37A00C7E88B /* MockAPIClient.swift */; };
 		322DD53127A3C4DB00C7E88B /* CreditReportRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD53027A3C4DB00C7E88B /* CreditReportRepositoryTests.swift */; };
+		322DD53627A3D6D600C7E88B /* CreditScoreSample.json in Resources */ = {isa = PBXBuildFile; fileRef = 322DD53527A3D6D600C7E88B /* CreditScoreSample.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		322DD52927A295B500C7E88B /* Resolver+XCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resolver+XCTests.swift"; sourceTree = "<group>"; };
 		322DD52E27A3C37A00C7E88B /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
 		322DD53027A3C4DB00C7E88B /* CreditReportRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditReportRepositoryTests.swift; sourceTree = "<group>"; };
+		322DD53527A3D6D600C7E88B /* CreditScoreSample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CreditScoreSample.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 		322DB14E27A16683001D45B5 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				322DD53227A3D66800C7E88B /* Helpers */,
 				322DB14F27A166E3001D45B5 /* BlockTestProtocolHandler.swift */,
 				322DB15127A1670A001D45B5 /* SampleCodable.swift */,
 				322DB15327A1672A001D45B5 /* APIClientTests.swift */,
@@ -239,6 +242,14 @@
 				322DD52727A292C100C7E88B /* AppDelegate+Resolver.swift */,
 			);
 			path = Resolver;
+			sourceTree = "<group>";
+		};
+		322DD53227A3D66800C7E88B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				322DD53527A3D6D600C7E88B /* CreditScoreSample.json */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +372,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				322DD53627A3D6D600C7E88B /* CreditScoreSample.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

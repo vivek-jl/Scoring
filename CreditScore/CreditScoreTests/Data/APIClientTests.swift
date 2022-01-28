@@ -7,6 +7,7 @@
 
 import Combine
 import XCTest
+import Resolver
 @testable import CreditScore
 
 class APIClientTests: XCTestCase {

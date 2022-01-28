@@ -10,7 +10,7 @@ import Foundation
 import Resolver
 @testable import CreditScore
 
-struct MockAPIClient: APIClientType {
+final class MockAPIClient: APIClientType {
     
     init(configuration: URLSessionConfiguration = Resolver.resolve(),
          environment: ServerEnvironment = Resolver.resolve()) { }

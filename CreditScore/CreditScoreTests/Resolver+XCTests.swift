@@ -17,6 +17,7 @@ extension Resolver {
         Resolver.test = Resolver(child: .main)
         Resolver.root = Resolver.test
         Resolver.test.register { ServerEnvironment.staging }
-        register { MockAPIClient(configuration: <#URLSessionConfiguration#>, environment: <#ServerEnvironment#>) }.implements(APIClientType.self)
+        Resolver.test.register { URLSessionConfiguration.ephemeral }
+        Resolver.test.register { MockAPIClient(configuration: resolve(), environment: resolve()) }.implements(APIClientType.self)
     }
 }
