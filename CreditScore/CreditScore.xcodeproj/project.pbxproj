@@ -34,6 +34,7 @@
 		322DD52F27A3C37A00C7E88B /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD52E27A3C37A00C7E88B /* MockAPIClient.swift */; };
 		322DD53127A3C4DB00C7E88B /* CreditReportRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD53027A3C4DB00C7E88B /* CreditReportRepositoryTests.swift */; };
 		322DD53627A3D6D600C7E88B /* CreditScoreSample.json in Resources */ = {isa = PBXBuildFile; fileRef = 322DD53527A3D6D600C7E88B /* CreditScoreSample.json */; };
+		322DD53827A3DD0A00C7E88B /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD53727A3DD0A00C7E88B /* JSONParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		322DD52E27A3C37A00C7E88B /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
 		322DD53027A3C4DB00C7E88B /* CreditReportRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditReportRepositoryTests.swift; sourceTree = "<group>"; };
 		322DD53527A3D6D600C7E88B /* CreditScoreSample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CreditScoreSample.json; sourceTree = "<group>"; };
+		322DD53727A3DD0A00C7E88B /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				322DD53527A3D6D600C7E88B /* CreditScoreSample.json */,
+				322DD53727A3DD0A00C7E88B /* JSONParser.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 			files = (
 				322DB15027A166E3001D45B5 /* BlockTestProtocolHandler.swift in Sources */,
 				322DB15227A1670A001D45B5 /* SampleCodable.swift in Sources */,
+				322DD53827A3DD0A00C7E88B /* JSONParser.swift in Sources */,
 				322DD52A27A295B500C7E88B /* Resolver+XCTests.swift in Sources */,
 				322DD53127A3C4DB00C7E88B /* CreditReportRepositoryTests.swift in Sources */,
 				322DD51A27A26F6100C7E88B /* EndpointTests.swift in Sources */,
