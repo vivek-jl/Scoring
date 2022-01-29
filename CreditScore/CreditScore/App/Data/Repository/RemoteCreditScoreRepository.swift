@@ -29,9 +29,18 @@ struct RemoteCreditScoreRepository: CreditScoreRepositoryType {
     }
     
     private func mapToDomain(score: CreditScoreDTO) -> CreditScore {
+        let creditScoreInfo = CreditScoreInfo(
+            monthsSinceLastDefaulted: score.creditReportInfo.monthsSinceLastDefaulted,
+            monthsSinceLastDelinquent: score.creditReportInfo.monthsSinceLastDelinquent,
+            hasEverDefaulted: score.creditReportInfo.hasEverDefaulted,
+            hasEverBeenDelinquent: score.creditReportInfo.hasEverBeenDelinquent,
+            percentageCreditUsed: score.creditReportInfo.percentageCreditUsed,
+            currentLongTermDebt: score.creditReportInfo.currentLongTermDebt,
+            currentLongTermNonPromotionalDebt: score.creditReportInfo.currentLongTermNonPromotionalDebt)
         return CreditScore(score: score.creditReportInfo.score,
                            minScore: score.creditReportInfo.minScoreValue,
-                           maxScore: score.creditReportInfo.maxScoreValue)
+                           maxScore: score.creditReportInfo.maxScoreValue,
+                           creditScoreInfo: creditScoreInfo)
     }
 
 }

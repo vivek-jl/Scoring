@@ -9,3 +9,9 @@
 "Home.NavbarTitle" = "Dashboard";
 "Home.Title" = "Your Credit Score is";
 "Home.Subtitle" = "out of %d";
+
+"Details.monthsSinceLastDefaulted" = "Months Since Last Defaulted";
+"Details.percentageCreditUsed" = "Percentage Credit Used";
+"Details.currentLongTermDebt" = "Current Long Term Debt";
+
+

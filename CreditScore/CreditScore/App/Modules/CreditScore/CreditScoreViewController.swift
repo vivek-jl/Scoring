@@ -15,11 +15,14 @@ class CreditScoreViewController: UIViewController {
     @Injected var viewModel: CreditScoreViewModel
     private var cancellable: AnyCancellable?
     
+    weak var coordinatorDelegate: AppCoordinatorDelegate?
+    
     // MARK: Sub Views
     private lazy var progressView = CircularProgressView()
     private lazy var titleLabel = UILabel()
     private lazy var scoreLabel = UILabel()
     private lazy var totalScoreLabel = UILabel()
+    private lazy var navigateToDetailsButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +67,20 @@ class CreditScoreViewController: UIViewController {
         totalScoreLabel.font = .systemFont(ofSize: 14)
         totalScoreLabel.textColor = Assets.subtitleTextColor.color
         
+        view.addSubview(navigateToDetailsButton)
+        navigateToDetailsButton.snp.makeConstraints {
+            $0.size.equalTo(view.frame.width * 0.6)
+            $0.centerX.equalToSuperview()
+            $0.centerY.equalToSuperview()
+        }
+        navigateToDetailsButton.addTarget(self, action: #selector(showDetails), for: .touchUpInside)
+
+    }
+    
+    @objc private func showDetails() {
+        if let info = viewModel.creditScoreInfo {
+            coordinatorDelegate?.showCreditScoreDetails(info: info)
+        }
     }
     
     private func observeViewModelChanges() {

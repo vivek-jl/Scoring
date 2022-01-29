@@ -13,6 +13,7 @@ final class CreditScoreViewModel: ObservableObject {
     
     @Injected var useCase: FetchCreditScoreUseCaseType
     @Published var state: CreditScoreViewModel.State = .idle
+    @Published var creditScoreInfo: CreditScoreInfo?
     
     private var subscribers = Set<AnyCancellable>()
 
@@ -33,11 +34,13 @@ extension CreditScoreViewModel {
                     self?.state = .loaded
                     if case let .failure(error) = completion {
                         self?.state = .error(error.errorDescription)
+                        
                     }
                 },
                 receiveValue: { [weak self] score in
                     print(score)
                     self?.state = .fetchComplete(score)
+                    self?.creditScoreInfo = score.creditScoreInfo
                 }
             ).store(in: &subscribers)
     }

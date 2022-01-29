@@ -52,6 +52,11 @@
 		322DD57727A5797200C7E88B /* Assets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD57627A5797200C7E88B /* Assets+Generated.swift */; };
 		322DD58027A5864300C7E88B /* CreditScoreViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD57F27A5864300C7E88B /* CreditScoreViewModelTests.swift */; };
 		322DD58227A5986200C7E88B /* MockFetchCreditScoreUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD58127A5986200C7E88B /* MockFetchCreditScoreUseCase.swift */; };
+		322DD58527A5AED400C7E88B /* CreditScoreDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD58427A5AED400C7E88B /* CreditScoreDetailsViewModel.swift */; };
+		322DD58727A5C82100C7E88B /* CreditScoreInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD58627A5C82100C7E88B /* CreditScoreInfo.swift */; };
+		322DD58A27A5CC5D00C7E88B /* CreditScoreDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD58827A5CC5D00C7E88B /* CreditScoreDetailsViewController.swift */; };
+		322DD58B27A5CC5D00C7E88B /* CreditScoreDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 322DD58927A5CC5D00C7E88B /* CreditScoreDetailsViewController.xib */; };
+		322DD58D27A5D6CD00C7E88B /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD58C27A5D6CD00C7E88B /* UIViewController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +124,11 @@
 		322DD57627A5797200C7E88B /* Assets+Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assets+Generated.swift"; sourceTree = "<group>"; };
 		322DD57F27A5864300C7E88B /* CreditScoreViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScoreViewModelTests.swift; sourceTree = "<group>"; };
 		322DD58127A5986200C7E88B /* MockFetchCreditScoreUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFetchCreditScoreUseCase.swift; sourceTree = "<group>"; };
+		322DD58427A5AED400C7E88B /* CreditScoreDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScoreDetailsViewModel.swift; sourceTree = "<group>"; };
+		322DD58627A5C82100C7E88B /* CreditScoreInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScoreInfo.swift; sourceTree = "<group>"; };
+		322DD58827A5CC5D00C7E88B /* CreditScoreDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScoreDetailsViewController.swift; sourceTree = "<group>"; };
+		322DD58927A5CC5D00C7E88B /* CreditScoreDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditScoreDetailsViewController.xib; sourceTree = "<group>"; };
+		322DD58C27A5D6CD00C7E88B /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,8 +212,8 @@
 		322DB13F27A160FE001D45B5 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				322DB14827A162D0001D45B5 /* NetworkEndpoints */,
-				322DB14D27A164D3001D45B5 /* NetworkDTO */,
+				322DB14827A162D0001D45B5 /* Endpoints */,
+				322DB14D27A164D3001D45B5 /* DTO */,
 				322DD52127A2724500C7E88B /* Repository */,
 			);
 			path = Data;
@@ -229,24 +239,24 @@
 			path = Client;
 			sourceTree = "<group>";
 		};
-		322DB14827A162D0001D45B5 /* NetworkEndpoints */ = {
+		322DB14827A162D0001D45B5 /* Endpoints */ = {
 			isa = PBXGroup;
 			children = (
 				322DB14B27A16309001D45B5 /* ClearScoreEndpoint.swift */,
 				322DD54627A3F9E000C7E88B /* Endpoint+Extension.swift */,
 				322DD54827A3F9F300C7E88B /* BaseURL.swift */,
 			);
-			path = NetworkEndpoints;
+			path = Endpoints;
 			sourceTree = "<group>";
 		};
-		322DB14D27A164D3001D45B5 /* NetworkDTO */ = {
+		322DB14D27A164D3001D45B5 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
 				322DD51B27A270E300C7E88B /* CreditScoreDTO.swift */,
 				322DD51D27A270F200C7E88B /* CoachingSummaryDTO.swift */,
 				322DD51F27A2715200C7E88B /* CreditReportDetailsDTO.swift */,
 			);
-			path = NetworkDTO;
+			path = DTO;
 			sourceTree = "<group>";
 		};
 		322DB14E27A16683001D45B5 /* Data */ = {
@@ -315,6 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				322DD54427A3F76300C7E88B /* CreditScore.swift */,
+				322DD58627A5C82100C7E88B /* CreditScoreInfo.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -339,6 +350,7 @@
 		322DD55427A5292E00C7E88B /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				322DD58327A5ADB600C7E88B /* CreditScoreDetails */,
 				322DD55527A5293600C7E88B /* CreditScore */,
 			);
 			path = Modules;
@@ -367,6 +379,7 @@
 			children = (
 				322DD56227A55A0F00C7E88B /* CircularProgressView.swift */,
 				322DD56427A55D9F00C7E88B /* TimingFunction.swift */,
+				322DD58C27A5D6CD00C7E88B /* UIViewController+Extensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -399,6 +412,16 @@
 				322DD58127A5986200C7E88B /* MockFetchCreditScoreUseCase.swift */,
 			);
 			path = Module;
+			sourceTree = "<group>";
+		};
+		322DD58327A5ADB600C7E88B /* CreditScoreDetails */ = {
+			isa = PBXGroup;
+			children = (
+				322DD58427A5AED400C7E88B /* CreditScoreDetailsViewModel.swift */,
+				322DD58827A5CC5D00C7E88B /* CreditScoreDetailsViewController.swift */,
+				322DD58927A5CC5D00C7E88B /* CreditScoreDetailsViewController.xib */,
+			);
+			path = CreditScoreDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -514,6 +537,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				322DB11C27A160C4001D45B5 /* LaunchScreen.storyboard in Resources */,
+				322DD58B27A5CC5D00C7E88B /* CreditScoreDetailsViewController.xib in Resources */,
 				322DD57127A573F900C7E88B /* Localizable.strings in Resources */,
 				322DD56E27A567E100C7E88B /* CreditScoreViewController.xib in Resources */,
 				322DB11927A160C4001D45B5 /* Assets.xcassets in Resources */,
@@ -543,6 +567,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				322DD55E27A550C900C7E88B /* AppCoordinator.swift in Sources */,
+				322DD58A27A5CC5D00C7E88B /* CreditScoreDetailsViewController.swift in Sources */,
 				322DD54B27A3FB6E00C7E88B /* HTTPMethod.swift in Sources */,
 				322DB14A27A162E2001D45B5 /* EndpointType.swift in Sources */,
 				322DD57527A575CF00C7E88B /* Strings+Generated.swift in Sources */,
@@ -555,6 +580,7 @@
 				322DD56327A55A0F00C7E88B /* CircularProgressView.swift in Sources */,
 				322DD55A27A54E3000C7E88B /* CreditScoreViewController.swift in Sources */,
 				322DD52027A2715200C7E88B /* CreditReportDetailsDTO.swift in Sources */,
+				322DD58527A5AED400C7E88B /* CreditScoreDetailsViewModel.swift in Sources */,
 				322DD54727A3F9E000C7E88B /* Endpoint+Extension.swift in Sources */,
 				322DD57727A5797200C7E88B /* Assets+Generated.swift in Sources */,
 				322DD56527A55D9F00C7E88B /* TimingFunction.swift in Sources */,
@@ -562,7 +588,9 @@
 				322DD53C27A3E6A200C7E88B /* FetchCreditScoreUseCase.swift in Sources */,
 				322DB14627A16290001D45B5 /* APIError.swift in Sources */,
 				322DD52827A292C100C7E88B /* AppDelegate+Resolver.swift in Sources */,
+				322DD58727A5C82100C7E88B /* CreditScoreInfo.swift in Sources */,
 				322DD55727A52A1100C7E88B /* CreditScoreViewModel.swift in Sources */,
+				322DD58D27A5D6CD00C7E88B /* UIViewController+Extensions.swift in Sources */,
 				322DB14C27A16309001D45B5 /* ClearScoreEndpoint.swift in Sources */,
 				322DD52327A2725D00C7E88B /* RemoteCreditScoreRepository.swift in Sources */,
 				322DD51C27A270E300C7E88B /* CreditScoreDTO.swift in Sources */,
@@ -759,6 +787,7 @@
 				INFOPLIST_FILE = CreditScore/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -785,6 +814,7 @@
 				INFOPLIST_FILE = CreditScore/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

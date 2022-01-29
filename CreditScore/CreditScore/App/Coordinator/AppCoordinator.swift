@@ -8,8 +8,12 @@
 import Foundation
 import UIKit
 
+
+protocol AppCoordinatorDelegate: AnyObject {
+    func showCreditScoreDetails(info: CreditScoreInfo)
+}
+
 class AppCoordinator {
-    
     private let navigationController = UINavigationController()
     
     var rootViewController: UIViewController {
@@ -25,18 +29,17 @@ class AppCoordinator {
 extension AppCoordinator {
     private func showScoreView() {
         let creditScoreViewController = CreditScoreViewController.loadFromNib()
+        creditScoreViewController.coordinatorDelegate = self
         navigationController.pushViewController(creditScoreViewController,
                                                 animated: true)
     }
 }
 
-
-extension UIViewController {
-    static func loadFromNib() -> Self {
-        func instantiateFromNib<T: UIViewController>() -> T {
-            return T.init(nibName: String(describing: T.self), bundle: nil)
-        }
-
-        return instantiateFromNib()
+extension AppCoordinator: AppCoordinatorDelegate {
+    func showCreditScoreDetails(info: CreditScoreInfo) {
+        let creditScoreDetailsViewController = CreditScoreDetailsViewController.loadFromNib()
+        creditScoreDetailsViewController.viewModel.creditScoreInfo = info
+        navigationController.pushViewController(creditScoreDetailsViewController,
+                                                animated: true)
     }
 }

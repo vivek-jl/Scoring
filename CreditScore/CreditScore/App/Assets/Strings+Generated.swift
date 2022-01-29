@@ -11,6 +11,15 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
 
+  internal enum Details {
+    /// Current Long Term Debt
+    internal static let currentLongTermDebt = L10n.tr("Localizable", "Details.currentLongTermDebt")
+    /// Months Since Last Defaulted
+    internal static let monthsSinceLastDefaulted = L10n.tr("Localizable", "Details.monthsSinceLastDefaulted")
+    /// Percentage Credit Used
+    internal static let percentageCreditUsed = L10n.tr("Localizable", "Details.percentageCreditUsed")
+  }
+
   internal enum Home {
     /// Dashboard
     internal static let navbarTitle = L10n.tr("Localizable", "Home.NavbarTitle")

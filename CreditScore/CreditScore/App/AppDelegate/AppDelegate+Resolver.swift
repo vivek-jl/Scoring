@@ -20,5 +20,6 @@ extension Resolver: ResolverRegistering {
         .implements(CreditScoreRepositoryType.self)
         register { APIClient() }.implements(APIClientType.self)
         register { CreditScoreViewModel() }
+        register { CreditScoreDetailsViewModel() }
     }
 }
