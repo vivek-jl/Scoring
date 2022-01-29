@@ -16,7 +16,7 @@
 		322DB13127A160C4001D45B5 /* CreditScoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DB13027A160C4001D45B5 /* CreditScoreUITests.swift */; };
 		322DB13327A160C4001D45B5 /* CreditScoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DB13227A160C4001D45B5 /* CreditScoreUITestsLaunchTests.swift */; };
 		322DB14227A1623B001D45B5 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DB14127A1623B001D45B5 /* APIClient.swift */; };
-		322DB14427A16262001D45B5 /* APIConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DB14327A16262001D45B5 /* APIConfigurations.swift */; };
+		322DB14427A16262001D45B5 /* ServerEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DB14327A16262001D45B5 /* ServerEnvironment.swift */; };
 		322DB14627A16290001D45B5 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DB14527A16290001D45B5 /* APIError.swift */; };
 		322DB14A27A162E2001D45B5 /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DB14927A162E2001D45B5 /* EndpointType.swift */; };
 		322DB14C27A16309001D45B5 /* ClearScoreEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DB14B27A16309001D45B5 /* ClearScoreEndpoint.swift */; };
@@ -27,14 +27,22 @@
 		322DD51C27A270E300C7E88B /* CreditScoreDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD51B27A270E300C7E88B /* CreditScoreDTO.swift */; };
 		322DD51E27A270F200C7E88B /* CoachingSummaryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD51D27A270F200C7E88B /* CoachingSummaryDTO.swift */; };
 		322DD52027A2715200C7E88B /* CreditReportDetailsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD51F27A2715200C7E88B /* CreditReportDetailsDTO.swift */; };
-		322DD52327A2725D00C7E88B /* CreditReportRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD52227A2725D00C7E88B /* CreditReportRepository.swift */; };
+		322DD52327A2725D00C7E88B /* RemoteCreditScoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD52227A2725D00C7E88B /* RemoteCreditScoreRepository.swift */; };
 		322DD52827A292C100C7E88B /* AppDelegate+Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD52727A292C100C7E88B /* AppDelegate+Resolver.swift */; };
 		322DD52A27A295B500C7E88B /* Resolver+XCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD52927A295B500C7E88B /* Resolver+XCTests.swift */; };
 		322DD52D27A2A73A00C7E88B /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 322DD52C27A2A73A00C7E88B /* Resolver */; };
 		322DD52F27A3C37A00C7E88B /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD52E27A3C37A00C7E88B /* MockAPIClient.swift */; };
-		322DD53127A3C4DB00C7E88B /* CreditReportRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD53027A3C4DB00C7E88B /* CreditReportRepositoryTests.swift */; };
+		322DD53127A3C4DB00C7E88B /* CreditScoreRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD53027A3C4DB00C7E88B /* CreditScoreRepositoryTests.swift */; };
 		322DD53627A3D6D600C7E88B /* CreditScoreSample.json in Resources */ = {isa = PBXBuildFile; fileRef = 322DD53527A3D6D600C7E88B /* CreditScoreSample.json */; };
 		322DD53827A3DD0A00C7E88B /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD53727A3DD0A00C7E88B /* JSONParser.swift */; };
+		322DD53C27A3E6A200C7E88B /* FetchCreditScoreUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD53B27A3E6A200C7E88B /* FetchCreditScoreUseCase.swift */; };
+		322DD54227A3F38000C7E88B /* CreditScoreRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD54127A3F38000C7E88B /* CreditScoreRepositoryType.swift */; };
+		322DD54527A3F76300C7E88B /* CreditScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD54427A3F76300C7E88B /* CreditScore.swift */; };
+		322DD54727A3F9E000C7E88B /* Endpoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD54627A3F9E000C7E88B /* Endpoint+Extension.swift */; };
+		322DD54927A3F9F300C7E88B /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD54827A3F9F300C7E88B /* BaseURL.swift */; };
+		322DD54B27A3FB6E00C7E88B /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD54A27A3FB6E00C7E88B /* HTTPMethod.swift */; };
+		322DD54E27A51FD000C7E88B /* CreditScoreUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD54D27A51FD000C7E88B /* CreditScoreUseCaseTests.swift */; };
+		322DD55027A51FDE00C7E88B /* MockCreditScoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD54F27A51FDE00C7E88B /* MockCreditScoreRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +76,7 @@
 		322DB13027A160C4001D45B5 /* CreditScoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScoreUITests.swift; sourceTree = "<group>"; };
 		322DB13227A160C4001D45B5 /* CreditScoreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScoreUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		322DB14127A1623B001D45B5 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		322DB14327A16262001D45B5 /* APIConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfigurations.swift; sourceTree = "<group>"; };
+		322DB14327A16262001D45B5 /* ServerEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerEnvironment.swift; sourceTree = "<group>"; };
 		322DB14527A16290001D45B5 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		322DB14927A162E2001D45B5 /* EndpointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointType.swift; sourceTree = "<group>"; };
 		322DB14B27A16309001D45B5 /* ClearScoreEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearScoreEndpoint.swift; sourceTree = "<group>"; };
@@ -79,13 +87,21 @@
 		322DD51B27A270E300C7E88B /* CreditScoreDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScoreDTO.swift; sourceTree = "<group>"; };
 		322DD51D27A270F200C7E88B /* CoachingSummaryDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachingSummaryDTO.swift; sourceTree = "<group>"; };
 		322DD51F27A2715200C7E88B /* CreditReportDetailsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditReportDetailsDTO.swift; sourceTree = "<group>"; };
-		322DD52227A2725D00C7E88B /* CreditReportRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditReportRepository.swift; sourceTree = "<group>"; };
+		322DD52227A2725D00C7E88B /* RemoteCreditScoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCreditScoreRepository.swift; sourceTree = "<group>"; };
 		322DD52727A292C100C7E88B /* AppDelegate+Resolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Resolver.swift"; sourceTree = "<group>"; };
 		322DD52927A295B500C7E88B /* Resolver+XCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resolver+XCTests.swift"; sourceTree = "<group>"; };
 		322DD52E27A3C37A00C7E88B /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
-		322DD53027A3C4DB00C7E88B /* CreditReportRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditReportRepositoryTests.swift; sourceTree = "<group>"; };
+		322DD53027A3C4DB00C7E88B /* CreditScoreRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScoreRepositoryTests.swift; sourceTree = "<group>"; };
 		322DD53527A3D6D600C7E88B /* CreditScoreSample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CreditScoreSample.json; sourceTree = "<group>"; };
 		322DD53727A3DD0A00C7E88B /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		322DD53B27A3E6A200C7E88B /* FetchCreditScoreUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCreditScoreUseCase.swift; sourceTree = "<group>"; };
+		322DD54127A3F38000C7E88B /* CreditScoreRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScoreRepositoryType.swift; sourceTree = "<group>"; };
+		322DD54427A3F76300C7E88B /* CreditScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScore.swift; sourceTree = "<group>"; };
+		322DD54627A3F9E000C7E88B /* Endpoint+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint+Extension.swift"; sourceTree = "<group>"; };
+		322DD54827A3F9F300C7E88B /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
+		322DD54A27A3FB6E00C7E88B /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		322DD54D27A51FD000C7E88B /* CreditScoreUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScoreUseCaseTests.swift; sourceTree = "<group>"; };
+		322DD54F27A51FDE00C7E88B /* MockCreditScoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCreditScoreRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +153,8 @@
 		322DB10E27A160C3001D45B5 /* CreditScore */ = {
 			isa = PBXGroup;
 			children = (
-				322DB13F27A160FE001D45B5 /* Data */,
+				322DD53D27A3F32400C7E88B /* App */,
+				322DB14027A16107001D45B5 /* Networking */,
 				322DD52427A2728000C7E88B /* Resolver */,
 				322DB10F27A160C3001D45B5 /* AppDelegate.swift */,
 				322DB11127A160C3001D45B5 /* SceneDelegate.swift */,
@@ -153,8 +170,9 @@
 		322DB12527A160C4001D45B5 /* CreditScoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				322DB14E27A16683001D45B5 /* Data */,
 				322DD52927A295B500C7E88B /* Resolver+XCTests.swift */,
+				322DD54C27A51F2300C7E88B /* Domain */,
+				322DB14E27A16683001D45B5 /* Data */,
 			);
 			path = CreditScoreTests;
 			sourceTree = "<group>";
@@ -171,9 +189,9 @@
 		322DB13F27A160FE001D45B5 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				322DB14827A162D0001D45B5 /* NetworkEndpoints */,
+				322DB14D27A164D3001D45B5 /* NetworkDTO */,
 				322DD52127A2724500C7E88B /* Repository */,
-				322DB14D27A164D3001D45B5 /* DTO */,
-				322DB14027A16107001D45B5 /* Networking */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -181,7 +199,6 @@
 		322DB14027A16107001D45B5 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				322DB14827A162D0001D45B5 /* Endpoints */,
 				322DB14727A162BD001D45B5 /* Client */,
 			);
 			path = Networking;
@@ -190,42 +207,42 @@
 		322DB14727A162BD001D45B5 /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				322DB14927A162E2001D45B5 /* EndpointType.swift */,
 				322DB14127A1623B001D45B5 /* APIClient.swift */,
-				322DB14327A16262001D45B5 /* APIConfigurations.swift */,
+				322DB14327A16262001D45B5 /* ServerEnvironment.swift */,
 				322DB14527A16290001D45B5 /* APIError.swift */,
+				322DD54A27A3FB6E00C7E88B /* HTTPMethod.swift */,
 			);
 			path = Client;
 			sourceTree = "<group>";
 		};
-		322DB14827A162D0001D45B5 /* Endpoints */ = {
+		322DB14827A162D0001D45B5 /* NetworkEndpoints */ = {
 			isa = PBXGroup;
 			children = (
-				322DB14927A162E2001D45B5 /* EndpointType.swift */,
 				322DB14B27A16309001D45B5 /* ClearScoreEndpoint.swift */,
+				322DD54627A3F9E000C7E88B /* Endpoint+Extension.swift */,
+				322DD54827A3F9F300C7E88B /* BaseURL.swift */,
 			);
-			path = Endpoints;
+			path = NetworkEndpoints;
 			sourceTree = "<group>";
 		};
-		322DB14D27A164D3001D45B5 /* DTO */ = {
+		322DB14D27A164D3001D45B5 /* NetworkDTO */ = {
 			isa = PBXGroup;
 			children = (
 				322DD51B27A270E300C7E88B /* CreditScoreDTO.swift */,
 				322DD51D27A270F200C7E88B /* CoachingSummaryDTO.swift */,
 				322DD51F27A2715200C7E88B /* CreditReportDetailsDTO.swift */,
 			);
-			path = DTO;
+			path = NetworkDTO;
 			sourceTree = "<group>";
 		};
 		322DB14E27A16683001D45B5 /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				322DD53227A3D66800C7E88B /* Helpers */,
-				322DB14F27A166E3001D45B5 /* BlockTestProtocolHandler.swift */,
-				322DB15127A1670A001D45B5 /* SampleCodable.swift */,
 				322DB15327A1672A001D45B5 /* APIClientTests.swift */,
 				322DD51927A26F6100C7E88B /* EndpointTests.swift */,
-				322DD52E27A3C37A00C7E88B /* MockAPIClient.swift */,
-				322DD53027A3C4DB00C7E88B /* CreditReportRepositoryTests.swift */,
+				322DD53027A3C4DB00C7E88B /* CreditScoreRepositoryTests.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -233,7 +250,7 @@
 		322DD52127A2724500C7E88B /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				322DD52227A2725D00C7E88B /* CreditReportRepository.swift */,
+				322DD52227A2725D00C7E88B /* RemoteCreditScoreRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -249,10 +266,81 @@
 		322DD53227A3D66800C7E88B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				322DB15127A1670A001D45B5 /* SampleCodable.swift */,
+				322DD52E27A3C37A00C7E88B /* MockAPIClient.swift */,
+				322DB14F27A166E3001D45B5 /* BlockTestProtocolHandler.swift */,
 				322DD53527A3D6D600C7E88B /* CreditScoreSample.json */,
 				322DD53727A3DD0A00C7E88B /* JSONParser.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		322DD53927A3E59A00C7E88B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				322DD55127A5209000C7E88B /* Repository */,
+				322DD53F27A3F36200C7E88B /* Entities */,
+				322DD53A27A3E60C00C7E88B /* Use Case */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		322DD53A27A3E60C00C7E88B /* Use Case */ = {
+			isa = PBXGroup;
+			children = (
+				322DD53B27A3E6A200C7E88B /* FetchCreditScoreUseCase.swift */,
+			);
+			path = "Use Case";
+			sourceTree = "<group>";
+		};
+		322DD53D27A3F32400C7E88B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				322DD55427A5292E00C7E88B /* Modules */,
+				322DD53927A3E59A00C7E88B /* Domain */,
+				322DB13F27A160FE001D45B5 /* Data */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		322DD53F27A3F36200C7E88B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				322DD54427A3F76300C7E88B /* CreditScore.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		322DD54C27A51F2300C7E88B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				322DD54D27A51FD000C7E88B /* CreditScoreUseCaseTests.swift */,
+				322DD54F27A51FDE00C7E88B /* MockCreditScoreRepository.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		322DD55127A5209000C7E88B /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				322DD54127A3F38000C7E88B /* CreditScoreRepositoryType.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		322DD55427A5292E00C7E88B /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				322DD55527A5293600C7E88B /* CreditScore */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		322DD55527A5293600C7E88B /* CreditScore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CreditScore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,18 +481,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				322DD54B27A3FB6E00C7E88B /* HTTPMethod.swift in Sources */,
 				322DB14A27A162E2001D45B5 /* EndpointType.swift in Sources */,
 				322DB11427A160C3001D45B5 /* ViewController.swift in Sources */,
-				322DB14427A16262001D45B5 /* APIConfigurations.swift in Sources */,
+				322DB14427A16262001D45B5 /* ServerEnvironment.swift in Sources */,
 				322DB11027A160C3001D45B5 /* AppDelegate.swift in Sources */,
+				322DD54527A3F76300C7E88B /* CreditScore.swift in Sources */,
 				322DD51E27A270F200C7E88B /* CoachingSummaryDTO.swift in Sources */,
 				322DB11227A160C3001D45B5 /* SceneDelegate.swift in Sources */,
 				322DB14227A1623B001D45B5 /* APIClient.swift in Sources */,
+				322DD54927A3F9F300C7E88B /* BaseURL.swift in Sources */,
 				322DD52027A2715200C7E88B /* CreditReportDetailsDTO.swift in Sources */,
+				322DD54727A3F9E000C7E88B /* Endpoint+Extension.swift in Sources */,
+				322DD54227A3F38000C7E88B /* CreditScoreRepositoryType.swift in Sources */,
+				322DD53C27A3E6A200C7E88B /* FetchCreditScoreUseCase.swift in Sources */,
 				322DB14627A16290001D45B5 /* APIError.swift in Sources */,
 				322DD52827A292C100C7E88B /* AppDelegate+Resolver.swift in Sources */,
 				322DB14C27A16309001D45B5 /* ClearScoreEndpoint.swift in Sources */,
-				322DD52327A2725D00C7E88B /* CreditReportRepository.swift in Sources */,
+				322DD52327A2725D00C7E88B /* RemoteCreditScoreRepository.swift in Sources */,
 				322DD51C27A270E300C7E88B /* CreditScoreDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,8 +511,10 @@
 				322DB15227A1670A001D45B5 /* SampleCodable.swift in Sources */,
 				322DD53827A3DD0A00C7E88B /* JSONParser.swift in Sources */,
 				322DD52A27A295B500C7E88B /* Resolver+XCTests.swift in Sources */,
-				322DD53127A3C4DB00C7E88B /* CreditReportRepositoryTests.swift in Sources */,
+				322DD54E27A51FD000C7E88B /* CreditScoreUseCaseTests.swift in Sources */,
+				322DD53127A3C4DB00C7E88B /* CreditScoreRepositoryTests.swift in Sources */,
 				322DD51A27A26F6100C7E88B /* EndpointTests.swift in Sources */,
+				322DD55027A51FDE00C7E88B /* MockCreditScoreRepository.swift in Sources */,
 				322DB15427A1672A001D45B5 /* APIClientTests.swift in Sources */,
 				322DD52F27A3C37A00C7E88B /* MockAPIClient.swift in Sources */,
 			);

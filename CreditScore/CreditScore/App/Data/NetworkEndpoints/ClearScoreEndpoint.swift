@@ -6,28 +6,22 @@
 //
 
 import Foundation
+import Resolver
 
 struct ClearScoreEndpoint: EndpointType {
+    @Injected var baseURL: BaseURLType
     var payload: HTTPParameters? = nil
     var method: HTTPMethod = .get
     var subPath: String = "mockcredit/values"
     var headers: HTTPHeaders? = nil
+    var timeout: Double = 20
 
     func buildRequest(_ environment: ServerEnvironment) -> URLRequest {
         var components = URLComponents()
         components.scheme = "https"
-        components.host = BaseURL.clearscoreBaseURL
+        components.host = baseURL.domain
         components.path = pathFor(environment: environment) + subPath
         components.queryItems = nil
-
-        guard let url = components.url else {
-            preconditionFailure("Invalid URL")
-        }
-
-        var urlRequest = URLRequest(url: url)
-        urlRequest.httpMethod = method.rawValue
-        urlRequest.timeoutInterval = 20
-
-        return urlRequest
+        return buildURLRequest(components: components)
     }
 }

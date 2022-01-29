@@ -11,15 +11,15 @@ import Combine
 @testable import CreditScore
 
 
-class CreditReportRepositoryTests: XCTestCase {
+class CreditScoreRepositoryTests: XCTestCase {
     
-    private var sut: RemoteCreditReportRepository?
+    private var sut: RemoteCreditScoreRepository?
     private var cancellables: Set<AnyCancellable>!
     
     override func setUpWithError() throws {
         Resolver.resetUnitTestRegistrations()
         cancellables = []
-        sut = RemoteCreditReportRepository()
+        sut = RemoteCreditScoreRepository()
     }
     
     override func tearDownWithError() throws {
@@ -40,7 +40,7 @@ class CreditReportRepositoryTests: XCTestCase {
         defer {
             self.wait(for: [fetchCompleted], timeout: 5)
         }
-        var object: CreditScoreDTO? = nil
+        var object: CreditScore? = nil
         var error: Error?
         
         sut?.getReport()
@@ -53,9 +53,9 @@ class CreditReportRepositoryTests: XCTestCase {
                 }
                 XCTAssertNil(error)
                 XCTAssertNotNil(object)
-                XCTAssertEqual(object?.creditReportInfo.score, 514)
-                XCTAssertEqual(object?.creditReportInfo.maxScoreValue, 700)
-                XCTAssertEqual(object?.creditReportInfo.minScoreValue, 0)
+                XCTAssertEqual(object?.score, 514)
+                XCTAssertEqual(object?.maxScore, 700)
+                XCTAssertEqual(object?.minScore, 0)
                 fetchCompleted.fulfill()
             }, receiveValue: { value in
                 object = value

@@ -9,6 +9,7 @@ import Combine
 import Resolver
 import Foundation
 
+
 protocol APIClientType {
     init(
         configuration: URLSessionConfiguration,
@@ -70,7 +71,6 @@ extension APIClient {
             let backendError = APIError.failedRequest(statusCode: statusCode)
             throw backendError
         }
-
         return result.data
     }
 }

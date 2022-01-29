@@ -16,8 +16,12 @@ extension Resolver {
     static func resetUnitTestRegistrations() {
         Resolver.test = Resolver(child: .main)
         Resolver.root = Resolver.test
+        Resolver.test.register { MockCreditScoreRepository()}
+        .implements(CreditScoreRepositoryType.self)
+        Resolver.test.register { BaseURL() }.implements(BaseURLType.self)
         Resolver.test.register { ServerEnvironment.staging }
         Resolver.test.register { URLSessionConfiguration.ephemeral }
-        Resolver.test.register { MockAPIClient(configuration: resolve(), environment: resolve()) }.implements(APIClientType.self)
+        Resolver.test.register { MockAPIClient(configuration: resolve(), environment: resolve()) }
+        .implements(APIClientType.self)
     }
 }
