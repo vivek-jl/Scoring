@@ -8,9 +8,10 @@
 import Foundation
 
 struct CreditReportDetailsDTO: Codable {
-    let score, scoreBand: Int
+    let score, scoreBand: Double
     let clientRef, status: String
-    let maxScoreValue, minScoreValue, monthsSinceLastDefaulted: Int
+    let maxScoreValue, minScoreValue: Double
+    let monthsSinceLastDefaulted: Int
     let hasEverDefaulted: Bool
     let monthsSinceLastDelinquent: Int
     let hasEverBeenDelinquent: Bool

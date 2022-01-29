@@ -16,7 +16,7 @@ final class CreditScoreViewModel: ObservableObject {
     
     private var subscribers = Set<AnyCancellable>()
 
-    enum State {
+    enum State: Equatable {
         case idle
         case loading
         case loaded

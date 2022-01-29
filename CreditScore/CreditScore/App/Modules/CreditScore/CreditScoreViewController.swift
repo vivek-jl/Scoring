@@ -8,20 +8,19 @@
 import UIKit
 import SnapKit
 import Combine
-import PKHUD
 import Resolver
 
 class CreditScoreViewController: UIViewController {
-
+    
     @Injected var viewModel: CreditScoreViewModel
     private var cancellable: AnyCancellable?
-
+    
     // MARK: Sub Views
     private lazy var progressView = CircularProgressView()
     private lazy var titleLabel = UILabel()
     private lazy var scoreLabel = UILabel()
     private lazy var totalScoreLabel = UILabel()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = L10n.Home.navbarTitle
@@ -40,7 +39,7 @@ class CreditScoreViewController: UIViewController {
         }
         progressView.startColor = Assets.progressStartColor.color
         progressView.endColor = Assets.progressEndColor.color
-
+        
         view.addSubview(scoreLabel)
         scoreLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
@@ -50,7 +49,6 @@ class CreditScoreViewController: UIViewController {
         scoreLabel.textColor = Assets.creditScoreTextColor.color
         
         view.addSubview(titleLabel)
-        titleLabel.text = L10n.Home.title
         titleLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.bottom.equalTo(scoreLabel).offset(-30)
@@ -59,7 +57,6 @@ class CreditScoreViewController: UIViewController {
         titleLabel.textColor = Assets.subtitleTextColor.color
         
         view.addSubview(totalScoreLabel)
-        totalScoreLabel.text = L10n.Home.subtitle(700)
         totalScoreLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.top.equalTo(scoreLabel).offset(30)
@@ -73,17 +70,33 @@ class CreditScoreViewController: UIViewController {
         cancellable = viewModel.objectWillChange.sink { [weak self] in
             switch self?.viewModel.state {
             case .idle:
-                PKHUD.sharedHUD.hide()
+                self?.updateActivityIndicator(status: false)
             case .loading:
-                PKHUD.sharedHUD.show()
+                self?.updateActivityIndicator(status: true)
             case .loaded:
-                PKHUD.sharedHUD.hide()
+                self?.updateActivityIndicator(status: false)
             case .fetchComplete(let creditScore):
-                self?.scoreLabel.text = "\(creditScore.score)"
-                self?.progressView.setProgress(0.5, animated: true, completion: nil)
-            default:
+                self?.showCreditScore(creditScore)
+            case .error(let errorMessage):
+                self?.showError(errorMessage)
+            case .none:
                 return
+            }
         }
     }
+    
+    private func showCreditScore(_ score: CreditScore) {
+        titleLabel.text = L10n.Home.title
+        totalScoreLabel.text = L10n.Home.subtitle(Int(score.maxScore))
+        scoreLabel.text = "\(Int(score.score))"
+        progressView.setProgress(Float(score.progressScore), animated: true, completion: nil)
+    }
+    
+    private func updateActivityIndicator(status: Bool) {
+
+    }
+    
+    private func showError(_ errorMessage: String) {
+        
     }
 }
