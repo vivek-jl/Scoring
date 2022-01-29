@@ -166,6 +166,7 @@
 		322DB12527A160C4001D45B5 /* CreditScoreTests */ = {
 			isa = PBXGroup;
 			children = (
+				322DD54C27A51F2300C7E88B /* Domain */,
 				322DB14E27A16683001D45B5 /* Data */,
 				322DD52927A295B500C7E88B /* Resolver+XCTests.swift */,
 			);
@@ -235,11 +236,8 @@
 			isa = PBXGroup;
 			children = (
 				322DD53227A3D66800C7E88B /* Helpers */,
-				322DB14F27A166E3001D45B5 /* BlockTestProtocolHandler.swift */,
-				322DB15127A1670A001D45B5 /* SampleCodable.swift */,
 				322DB15327A1672A001D45B5 /* APIClientTests.swift */,
 				322DD51927A26F6100C7E88B /* EndpointTests.swift */,
-				322DD52E27A3C37A00C7E88B /* MockAPIClient.swift */,
 				322DD53027A3C4DB00C7E88B /* CreditReportRepositoryTests.swift */,
 			);
 			path = Data;
@@ -265,6 +263,9 @@
 		322DD53227A3D66800C7E88B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				322DB15127A1670A001D45B5 /* SampleCodable.swift */,
+				322DD52E27A3C37A00C7E88B /* MockAPIClient.swift */,
+				322DB14F27A166E3001D45B5 /* BlockTestProtocolHandler.swift */,
 				322DD53527A3D6D600C7E88B /* CreditScoreSample.json */,
 				322DD53727A3DD0A00C7E88B /* JSONParser.swift */,
 			);
@@ -303,6 +304,13 @@
 				322DD54427A3F76300C7E88B /* CreditScore.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		322DD54C27A51F2300C7E88B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

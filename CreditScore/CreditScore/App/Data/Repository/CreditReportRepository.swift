@@ -21,8 +21,8 @@ struct CreditReportRepository: CreditReportRepositoryType {
     
     private func mapToDomain(score: CreditScoreDTO) -> CreditScore {
         return CreditScore(score: score.creditReportInfo.score,
-                           minScore: score.creditReportInfo.maxScoreValue,
-                           maxScore: score.creditReportInfo.minScoreValue)
+                           minScore: score.creditReportInfo.minScoreValue,
+                           maxScore: score.creditReportInfo.maxScoreValue)
     }
 
 }
