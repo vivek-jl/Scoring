@@ -45,6 +45,9 @@
 		322DD55A27A54E3000C7E88B /* CreditScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD55827A54E3000C7E88B /* CreditScoreViewController.swift */; };
 		322DD55E27A550C900C7E88B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD55D27A550C900C7E88B /* AppCoordinator.swift */; };
 		322DD56027A5531D00C7E88B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD55F27A5531D00C7E88B /* SceneDelegate.swift */; };
+		322DD56327A55A0F00C7E88B /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD56227A55A0F00C7E88B /* CircularProgressView.swift */; };
+		322DD56527A55D9F00C7E88B /* TimingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD56427A55D9F00C7E88B /* TimingFunction.swift */; };
+		322DD56827A563A900C7E88B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 322DD56727A563A900C7E88B /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +109,8 @@
 		322DD55827A54E3000C7E88B /* CreditScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScoreViewController.swift; sourceTree = "<group>"; };
 		322DD55D27A550C900C7E88B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		322DD55F27A5531D00C7E88B /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		322DD56227A55A0F00C7E88B /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		322DD56427A55D9F00C7E88B /* TimingFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimingFunction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +119,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				322DD52D27A2A73A00C7E88B /* Resolver in Frameworks */,
+				322DD56827A563A900C7E88B /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,9 +163,10 @@
 		322DB10E27A160C3001D45B5 /* CreditScore */ = {
 			isa = PBXGroup;
 			children = (
+				322DD52427A2728000C7E88B /* Resolver */,
 				322DD53D27A3F32400C7E88B /* App */,
 				322DB14027A16107001D45B5 /* Networking */,
-				322DD52427A2728000C7E88B /* Resolver */,
+				322DD56127A559F800C7E88B /* Helpers */,
 				322DB11527A160C3001D45B5 /* Main.storyboard */,
 				322DB11827A160C4001D45B5 /* Assets.xcassets */,
 				322DB11A27A160C4001D45B5 /* LaunchScreen.storyboard */,
@@ -357,6 +364,15 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		322DD56127A559F800C7E88B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				322DD56227A55A0F00C7E88B /* CircularProgressView.swift */,
+				322DD56427A55D9F00C7E88B /* TimingFunction.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -375,6 +391,7 @@
 			name = CreditScore;
 			packageProductDependencies = (
 				322DD52C27A2A73A00C7E88B /* Resolver */,
+				322DD56727A563A900C7E88B /* SnapKit */,
 			);
 			productName = CreditScore;
 			productReference = 322DB10C27A160C3001D45B5 /* CreditScore.app */;
@@ -450,6 +467,7 @@
 			mainGroup = 322DB10327A160C3001D45B5;
 			packageReferences = (
 				322DD52B27A2A73A00C7E88B /* XCRemoteSwiftPackageReference "Resolver" */,
+				322DD56627A563A900C7E88B /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 322DB10D27A160C3001D45B5 /* Products */;
 			projectDirPath = "";
@@ -505,9 +523,11 @@
 				322DB14227A1623B001D45B5 /* APIClient.swift in Sources */,
 				322DD56027A5531D00C7E88B /* SceneDelegate.swift in Sources */,
 				322DD54927A3F9F300C7E88B /* BaseURL.swift in Sources */,
+				322DD56327A55A0F00C7E88B /* CircularProgressView.swift in Sources */,
 				322DD55A27A54E3000C7E88B /* CreditScoreViewController.swift in Sources */,
 				322DD52027A2715200C7E88B /* CreditReportDetailsDTO.swift in Sources */,
 				322DD54727A3F9E000C7E88B /* Endpoint+Extension.swift in Sources */,
+				322DD56527A55D9F00C7E88B /* TimingFunction.swift in Sources */,
 				322DD54227A3F38000C7E88B /* CreditScoreRepositoryType.swift in Sources */,
 				322DD53C27A3E6A200C7E88B /* FetchCreditScoreUseCase.swift in Sources */,
 				322DB14627A16290001D45B5 /* APIError.swift in Sources */,
@@ -872,6 +892,14 @@
 				kind = branch;
 			};
 		};
+		322DD56627A563A900C7E88B /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -879,6 +907,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 322DD52B27A2A73A00C7E88B /* XCRemoteSwiftPackageReference "Resolver" */;
 			productName = Resolver;
+		};
+		322DD56727A563A900C7E88B /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 322DD56627A563A900C7E88B /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

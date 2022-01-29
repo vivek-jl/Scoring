@@ -30,7 +30,7 @@ final class APIClient: APIClientType {
         delegate: nil,
         delegateQueue: nil
     )
-
+    
     required init(
         configuration: URLSessionConfiguration = Resolver.resolve(),
         environment: ServerEnvironment = Resolver.resolve()
@@ -38,11 +38,11 @@ final class APIClient: APIClientType {
         self.sessionConfiguration = configuration
         self.environment = environment
     }
-
+    
     func change(environment: ServerEnvironment) {
         self.environment = environment
     }
-
+    
     func request<T: Decodable>(
         type: T.Type,
         endpoint: EndpointType
@@ -56,6 +56,7 @@ final class APIClient: APIClientType {
     
     private func getData(endpoint: EndpointType) -> AnyPublisher<Data, APIError> {
         let urlRequest = endpoint.buildRequest(environment)
+              print("URL:\n \(urlRequest.url?.absoluteString ?? "")")
         return urlSession.dataTaskPublisher(for: urlRequest)
             .tryMap { try self.validate(result: $0) }
             .mapError { APIError(from: $0) }
@@ -67,6 +68,12 @@ extension APIClient {
     
     func validate(result: URLSession.DataTaskPublisher.Output) throws -> Data {
         let statusCode = (result.response as? HTTPURLResponse)?.statusCode ?? 0
+#if DEBUG
+        print("""
+       API Response:\n
+       \(String(data: result.data, encoding: .utf8) ?? "no data")\n
+       """)
+#endif
         guard (200 ..< 300).contains(statusCode) else {
             let backendError = APIError.failedRequest(statusCode: statusCode)
             throw backendError
