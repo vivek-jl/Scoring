@@ -11,15 +11,15 @@ import Combine
 @testable import CreditScore
 
 
-class CreditReportRepositoryTests: XCTestCase {
+class CreditScoreRepositoryTests: XCTestCase {
     
-    private var sut: CreditReportRepository?
+    private var sut: RemoteCreditScoreRepository?
     private var cancellables: Set<AnyCancellable>!
     
     override func setUpWithError() throws {
         Resolver.resetUnitTestRegistrations()
         cancellables = []
-        sut = CreditReportRepository()
+        sut = RemoteCreditScoreRepository()
     }
     
     override func tearDownWithError() throws {

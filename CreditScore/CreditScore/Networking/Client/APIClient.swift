@@ -71,7 +71,6 @@ extension APIClient {
             let backendError = APIError.failedRequest(statusCode: statusCode)
             throw backendError
         }
-
         return result.data
     }
 }

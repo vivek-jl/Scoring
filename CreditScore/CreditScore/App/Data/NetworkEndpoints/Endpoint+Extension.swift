@@ -19,9 +19,8 @@ extension EndpointType {
     
     func buildURLRequest(components: URLComponents) -> URLRequest {
         guard let url = components.url else {
-            preconditionFailure("Invalid URL")
+            fatalError("Invalid URL")
         }
-
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue
         urlRequest.timeoutInterval = 20

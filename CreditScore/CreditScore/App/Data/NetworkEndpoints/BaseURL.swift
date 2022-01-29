@@ -7,6 +7,10 @@
 
 import Foundation
 
-struct BaseURL {
-    static let clearscoreBaseURL = "5lfoiyb0b3.execute-api.us-west-2.amazonaws.com"
+protocol BaseURLType {
+    var domain: String { get }
+}
+
+struct BaseURL: BaseURLType {
+    let domain = "5lfoiyb0b3.execute-api.us-west-2.amazonaws.com"
 }

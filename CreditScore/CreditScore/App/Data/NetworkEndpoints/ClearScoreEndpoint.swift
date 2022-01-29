@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import Resolver
 
 struct ClearScoreEndpoint: EndpointType {
+    @Injected var baseURL: BaseURLType
     var payload: HTTPParameters? = nil
     var method: HTTPMethod = .get
     var subPath: String = "mockcredit/values"
@@ -17,7 +19,7 @@ struct ClearScoreEndpoint: EndpointType {
     func buildRequest(_ environment: ServerEnvironment) -> URLRequest {
         var components = URLComponents()
         components.scheme = "https"
-        components.host = BaseURL.clearscoreBaseURL
+        components.host = baseURL.domain
         components.path = pathFor(environment: environment) + subPath
         components.queryItems = nil
         return buildURLRequest(components: components)

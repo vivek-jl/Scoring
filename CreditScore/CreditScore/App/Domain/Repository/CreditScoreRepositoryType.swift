@@ -8,6 +8,6 @@
 import Foundation
 import Combine
 
-protocol CreditReportRepositoryType {
+protocol CreditScoreRepositoryType {
     func getReport() -> AnyPublisher<CreditScore, APIError>
 }

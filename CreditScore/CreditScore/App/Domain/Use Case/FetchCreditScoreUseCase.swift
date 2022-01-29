@@ -15,7 +15,7 @@ protocol FetchCreditScoreUseCaseType {
 
 struct FetchCreditScoreUseCase: FetchCreditScoreUseCaseType {
     
-    @Injected var creditScoreRepo: CreditReportRepositoryType
+    @Injected var creditScoreRepo: CreditScoreRepositoryType
     
     func fetchCreditScore() -> AnyPublisher<CreditScore, APIError> {
         return creditScoreRepo.getReport()

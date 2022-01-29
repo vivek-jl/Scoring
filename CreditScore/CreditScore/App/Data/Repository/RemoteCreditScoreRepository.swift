@@ -9,7 +9,7 @@ import Foundation
 import Combine
 import Resolver
 
-struct CreditReportRepository: CreditReportRepositoryType {
+struct RemoteCreditScoreRepository: CreditScoreRepositoryType {
     
     @Injected var apiClient: APIClientType
     
