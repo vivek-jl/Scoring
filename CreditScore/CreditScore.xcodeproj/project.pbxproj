@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		322DB11027A160C3001D45B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DB10F27A160C3001D45B5 /* AppDelegate.swift */; };
-		322DB11727A160C3001D45B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322DB11527A160C3001D45B5 /* Main.storyboard */; };
 		322DB11927A160C4001D45B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 322DB11827A160C4001D45B5 /* Assets.xcassets */; };
 		322DB11C27A160C4001D45B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322DB11A27A160C4001D45B5 /* LaunchScreen.storyboard */; };
 		322DB13127A160C4001D45B5 /* CreditScoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DB13027A160C4001D45B5 /* CreditScoreUITests.swift */; };
@@ -44,10 +43,14 @@
 		322DD55727A52A1100C7E88B /* CreditScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD55627A52A1100C7E88B /* CreditScoreViewModel.swift */; };
 		322DD55A27A54E3000C7E88B /* CreditScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD55827A54E3000C7E88B /* CreditScoreViewController.swift */; };
 		322DD55E27A550C900C7E88B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD55D27A550C900C7E88B /* AppCoordinator.swift */; };
-		322DD56027A5531D00C7E88B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD55F27A5531D00C7E88B /* SceneDelegate.swift */; };
 		322DD56327A55A0F00C7E88B /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD56227A55A0F00C7E88B /* CircularProgressView.swift */; };
 		322DD56527A55D9F00C7E88B /* TimingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD56427A55D9F00C7E88B /* TimingFunction.swift */; };
 		322DD56827A563A900C7E88B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 322DD56727A563A900C7E88B /* SnapKit */; };
+		322DD56E27A567E100C7E88B /* CreditScoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 322DD56D27A567E100C7E88B /* CreditScoreViewController.xib */; };
+		322DD57127A573F900C7E88B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 322DD57327A573F900C7E88B /* Localizable.strings */; };
+		322DD57527A575CF00C7E88B /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD57427A575CF00C7E88B /* Strings+Generated.swift */; };
+		322DD57727A5797200C7E88B /* Assets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD57627A5797200C7E88B /* Assets+Generated.swift */; };
+		322DD57D27A580A300C7E88B /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 322DD57C27A580A300C7E88B /* PKHUD */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +73,6 @@
 /* Begin PBXFileReference section */
 		322DB10C27A160C3001D45B5 /* CreditScore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreditScore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		322DB10F27A160C3001D45B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		322DB11627A160C3001D45B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		322DB11827A160C4001D45B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		322DB11B27A160C4001D45B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		322DB11D27A160C4001D45B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,9 +110,12 @@
 		322DD55627A52A1100C7E88B /* CreditScoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScoreViewModel.swift; sourceTree = "<group>"; };
 		322DD55827A54E3000C7E88B /* CreditScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScoreViewController.swift; sourceTree = "<group>"; };
 		322DD55D27A550C900C7E88B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		322DD55F27A5531D00C7E88B /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		322DD56227A55A0F00C7E88B /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		322DD56427A55D9F00C7E88B /* TimingFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimingFunction.swift; sourceTree = "<group>"; };
+		322DD56D27A567E100C7E88B /* CreditScoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditScoreViewController.xib; sourceTree = "<group>"; };
+		322DD57227A573F900C7E88B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		322DD57427A575CF00C7E88B /* Strings+Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
+		322DD57627A5797200C7E88B /* Assets+Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assets+Generated.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				322DD57D27A580A300C7E88B /* PKHUD in Frameworks */,
 				322DD52D27A2A73A00C7E88B /* Resolver in Frameworks */,
 				322DD56827A563A900C7E88B /* SnapKit in Frameworks */,
 			);
@@ -163,13 +169,9 @@
 		322DB10E27A160C3001D45B5 /* CreditScore */ = {
 			isa = PBXGroup;
 			children = (
-				322DD52427A2728000C7E88B /* Resolver */,
 				322DD53D27A3F32400C7E88B /* App */,
 				322DB14027A16107001D45B5 /* Networking */,
 				322DD56127A559F800C7E88B /* Helpers */,
-				322DB11527A160C3001D45B5 /* Main.storyboard */,
-				322DB11827A160C4001D45B5 /* Assets.xcassets */,
-				322DB11A27A160C4001D45B5 /* LaunchScreen.storyboard */,
 				322DB11D27A160C4001D45B5 /* Info.plist */,
 			);
 			path = CreditScore;
@@ -263,14 +265,6 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
-		322DD52427A2728000C7E88B /* Resolver */ = {
-			isa = PBXGroup;
-			children = (
-				322DD52727A292C100C7E88B /* AppDelegate+Resolver.swift */,
-			);
-			path = Resolver;
-			sourceTree = "<group>";
-		};
 		322DD53227A3D66800C7E88B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,8 +298,8 @@
 		322DD53D27A3F32400C7E88B /* App */ = {
 			isa = PBXGroup;
 			children = (
-				322DD55F27A5531D00C7E88B /* SceneDelegate.swift */,
-				322DB10F27A160C3001D45B5 /* AppDelegate.swift */,
+				322DD56B27A566B800C7E88B /* AppDelegate */,
+				322DD56A27A566AA00C7E88B /* Assets */,
 				322DD55C27A54EAC00C7E88B /* Coordinator */,
 				322DD55427A5292E00C7E88B /* Modules */,
 				322DD53927A3E59A00C7E88B /* Domain */,
@@ -352,6 +346,7 @@
 			children = (
 				322DD55627A52A1100C7E88B /* CreditScoreViewModel.swift */,
 				322DD55827A54E3000C7E88B /* CreditScoreViewController.swift */,
+				322DD56D27A567E100C7E88B /* CreditScoreViewController.xib */,
 			);
 			path = CreditScore;
 			sourceTree = "<group>";
@@ -373,6 +368,27 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		322DD56A27A566AA00C7E88B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				322DB11827A160C4001D45B5 /* Assets.xcassets */,
+				322DB11A27A160C4001D45B5 /* LaunchScreen.storyboard */,
+				322DD57327A573F900C7E88B /* Localizable.strings */,
+				322DD57427A575CF00C7E88B /* Strings+Generated.swift */,
+				322DD57627A5797200C7E88B /* Assets+Generated.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		322DD56B27A566B800C7E88B /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				322DD52727A292C100C7E88B /* AppDelegate+Resolver.swift */,
+				322DB10F27A160C3001D45B5 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -392,6 +408,7 @@
 			packageProductDependencies = (
 				322DD52C27A2A73A00C7E88B /* Resolver */,
 				322DD56727A563A900C7E88B /* SnapKit */,
+				322DD57C27A580A300C7E88B /* PKHUD */,
 			);
 			productName = CreditScore;
 			productReference = 322DB10C27A160C3001D45B5 /* CreditScore.app */;
@@ -468,6 +485,7 @@
 			packageReferences = (
 				322DD52B27A2A73A00C7E88B /* XCRemoteSwiftPackageReference "Resolver" */,
 				322DD56627A563A900C7E88B /* XCRemoteSwiftPackageReference "SnapKit" */,
+				322DD57B27A580A300C7E88B /* XCRemoteSwiftPackageReference "PKHUD" */,
 			);
 			productRefGroup = 322DB10D27A160C3001D45B5 /* Products */;
 			projectDirPath = "";
@@ -486,8 +504,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				322DB11C27A160C4001D45B5 /* LaunchScreen.storyboard in Resources */,
+				322DD57127A573F900C7E88B /* Localizable.strings in Resources */,
+				322DD56E27A567E100C7E88B /* CreditScoreViewController.xib in Resources */,
 				322DB11927A160C4001D45B5 /* Assets.xcassets in Resources */,
-				322DB11727A160C3001D45B5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,17 +535,18 @@
 				322DD55E27A550C900C7E88B /* AppCoordinator.swift in Sources */,
 				322DD54B27A3FB6E00C7E88B /* HTTPMethod.swift in Sources */,
 				322DB14A27A162E2001D45B5 /* EndpointType.swift in Sources */,
+				322DD57527A575CF00C7E88B /* Strings+Generated.swift in Sources */,
 				322DB14427A16262001D45B5 /* ServerEnvironment.swift in Sources */,
 				322DB11027A160C3001D45B5 /* AppDelegate.swift in Sources */,
 				322DD54527A3F76300C7E88B /* CreditScore.swift in Sources */,
 				322DD51E27A270F200C7E88B /* CoachingSummaryDTO.swift in Sources */,
 				322DB14227A1623B001D45B5 /* APIClient.swift in Sources */,
-				322DD56027A5531D00C7E88B /* SceneDelegate.swift in Sources */,
 				322DD54927A3F9F300C7E88B /* BaseURL.swift in Sources */,
 				322DD56327A55A0F00C7E88B /* CircularProgressView.swift in Sources */,
 				322DD55A27A54E3000C7E88B /* CreditScoreViewController.swift in Sources */,
 				322DD52027A2715200C7E88B /* CreditReportDetailsDTO.swift in Sources */,
 				322DD54727A3F9E000C7E88B /* Endpoint+Extension.swift in Sources */,
+				322DD57727A5797200C7E88B /* Assets+Generated.swift in Sources */,
 				322DD56527A55D9F00C7E88B /* TimingFunction.swift in Sources */,
 				322DD54227A3F38000C7E88B /* CreditScoreRepositoryType.swift in Sources */,
 				322DD53C27A3E6A200C7E88B /* FetchCreditScoreUseCase.swift in Sources */,
@@ -581,20 +601,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		322DB11527A160C3001D45B5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				322DB11627A160C3001D45B5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		322DB11A27A160C4001D45B5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				322DB11B27A160C4001D45B5 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		322DD57327A573F900C7E88B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				322DD57227A573F900C7E88B /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -727,7 +747,6 @@
 				INFOPLIST_FILE = CreditScore/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -754,7 +773,6 @@
 				INFOPLIST_FILE = CreditScore/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -900,6 +918,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		322DD57B27A580A300C7E88B /* XCRemoteSwiftPackageReference "PKHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pkluz/PKHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -912,6 +938,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 322DD56627A563A900C7E88B /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		322DD57C27A580A300C7E88B /* PKHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 322DD57B27A580A300C7E88B /* XCRemoteSwiftPackageReference "PKHUD" */;
+			productName = PKHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

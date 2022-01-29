@@ -1,0 +1,18 @@
+## Generate constants for your localized strings.
+##   Be sure that SwiftGen only parses ONE locale (typically Base.lproj, or en.lproj, or whichever your development region is); otherwise it will generate the same keys multiple times.
+##   SwiftGen will parse all `.strings` files found in that folder.
+ strings:
+   inputs:
+     - CreditScore/App/Assets/en.lproj
+   outputs:
+     - templateName: structured-swift5
+       output: CreditScore/App/Assets/Strings+Generated.swift
+
+ xcassets:
+     inputs:
+      - CreditScore/App/Assets/Assets.xcassets
+     outputs:
+      - templateName: swift5
+        output: CreditScore/App/Assets/Assets+Generated.swift
+        params:
+         enumName: Assets

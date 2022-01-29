@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  CreditScore
+
+  Created by Vivek Jayakumar on 29/1/22.
+  
+*/
+
+"Home.NavbarTitle" = "Dashboard";
+"Home.Title" = "Your Credit Score is";
+"Home.Subtitle" = "out of %d";

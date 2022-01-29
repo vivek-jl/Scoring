@@ -24,9 +24,19 @@ class AppCoordinator {
 
 extension AppCoordinator {
     private func showScoreView() {
-        guard let creditScoreViewController = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "CreditScoreView") as? CreditScoreViewController else {
-            fatalError("Unable to Instantiate CreditScoreViewController")
+        let creditScoreViewController = CreditScoreViewController.loadFromNib()
+        navigationController.pushViewController(creditScoreViewController,
+                                                animated: true)
+    }
+}
+
+
+extension UIViewController {
+    static func loadFromNib() -> Self {
+        func instantiateFromNib<T: UIViewController>() -> T {
+            return T.init(nibName: String(describing: T.self), bundle: nil)
         }
-        navigationController.pushViewController(creditScoreViewController, animated: true)
+
+        return instantiateFromNib()
     }
 }

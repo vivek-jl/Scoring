@@ -72,7 +72,7 @@ class CircularProgressView: UIView {
     public var duration: TimeInterval = 2.0
     
     /// Timing function of the ring's fill animation. Default is `.easeOutExpo`
-    public var timingFunction: TimingFunction = .easeOutExpo
+    public var timingFunction: TimingFunction = .easeIn
 
     /// The radius of the ring.
     public var ringRadius: CGFloat {

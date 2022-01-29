@@ -20,7 +20,7 @@ final class CreditScoreViewModel: ObservableObject {
         case idle
         case loading
         case loaded
-        case loadComplete(CreditScore)
+        case fetchComplete(CreditScore)
         case error(String)
     }
 }
@@ -37,7 +37,7 @@ extension CreditScoreViewModel {
                 },
                 receiveValue: { [weak self] score in
                     print(score)
-                    self?.state = .loadComplete(score)
+                    self?.state = .fetchComplete(score)
                 }
             ).store(in: &subscribers)
     }
