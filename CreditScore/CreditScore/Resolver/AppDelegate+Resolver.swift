@@ -14,6 +14,11 @@ extension Resolver: ResolverRegistering {
         register { BaseURL() }.implements(BaseURLType.self)
         register { URLSessionConfiguration.default }
         register { ServerEnvironment.staging }
+        register { FetchCreditScoreUseCase() }
+        .implements(FetchCreditScoreUseCaseType.self)
+        register { RemoteCreditScoreRepository() }
+        .implements(CreditScoreRepositoryType.self)
         register { APIClient() }.implements(APIClientType.self)
+        register { CreditScoreViewModel() }
     }
 }

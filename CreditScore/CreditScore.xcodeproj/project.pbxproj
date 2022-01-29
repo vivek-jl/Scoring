@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		322DB11027A160C3001D45B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DB10F27A160C3001D45B5 /* AppDelegate.swift */; };
-		322DB11227A160C3001D45B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DB11127A160C3001D45B5 /* SceneDelegate.swift */; };
-		322DB11427A160C3001D45B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DB11327A160C3001D45B5 /* ViewController.swift */; };
 		322DB11727A160C3001D45B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322DB11527A160C3001D45B5 /* Main.storyboard */; };
 		322DB11927A160C4001D45B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 322DB11827A160C4001D45B5 /* Assets.xcassets */; };
 		322DB11C27A160C4001D45B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322DB11A27A160C4001D45B5 /* LaunchScreen.storyboard */; };
@@ -43,6 +41,10 @@
 		322DD54B27A3FB6E00C7E88B /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD54A27A3FB6E00C7E88B /* HTTPMethod.swift */; };
 		322DD54E27A51FD000C7E88B /* CreditScoreUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD54D27A51FD000C7E88B /* CreditScoreUseCaseTests.swift */; };
 		322DD55027A51FDE00C7E88B /* MockCreditScoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD54F27A51FDE00C7E88B /* MockCreditScoreRepository.swift */; };
+		322DD55727A52A1100C7E88B /* CreditScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD55627A52A1100C7E88B /* CreditScoreViewModel.swift */; };
+		322DD55A27A54E3000C7E88B /* CreditScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD55827A54E3000C7E88B /* CreditScoreViewController.swift */; };
+		322DD55E27A550C900C7E88B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD55D27A550C900C7E88B /* AppCoordinator.swift */; };
+		322DD56027A5531D00C7E88B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD55F27A5531D00C7E88B /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,8 +67,6 @@
 /* Begin PBXFileReference section */
 		322DB10C27A160C3001D45B5 /* CreditScore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreditScore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		322DB10F27A160C3001D45B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		322DB11127A160C3001D45B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		322DB11327A160C3001D45B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		322DB11627A160C3001D45B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		322DB11827A160C4001D45B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		322DB11B27A160C4001D45B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -102,6 +102,10 @@
 		322DD54A27A3FB6E00C7E88B /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		322DD54D27A51FD000C7E88B /* CreditScoreUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScoreUseCaseTests.swift; sourceTree = "<group>"; };
 		322DD54F27A51FDE00C7E88B /* MockCreditScoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCreditScoreRepository.swift; sourceTree = "<group>"; };
+		322DD55627A52A1100C7E88B /* CreditScoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScoreViewModel.swift; sourceTree = "<group>"; };
+		322DD55827A54E3000C7E88B /* CreditScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScoreViewController.swift; sourceTree = "<group>"; };
+		322DD55D27A550C900C7E88B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		322DD55F27A5531D00C7E88B /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,9 +160,6 @@
 				322DD53D27A3F32400C7E88B /* App */,
 				322DB14027A16107001D45B5 /* Networking */,
 				322DD52427A2728000C7E88B /* Resolver */,
-				322DB10F27A160C3001D45B5 /* AppDelegate.swift */,
-				322DB11127A160C3001D45B5 /* SceneDelegate.swift */,
-				322DB11327A160C3001D45B5 /* ViewController.swift */,
 				322DB11527A160C3001D45B5 /* Main.storyboard */,
 				322DB11827A160C4001D45B5 /* Assets.xcassets */,
 				322DB11A27A160C4001D45B5 /* LaunchScreen.storyboard */,
@@ -296,6 +297,9 @@
 		322DD53D27A3F32400C7E88B /* App */ = {
 			isa = PBXGroup;
 			children = (
+				322DD55F27A5531D00C7E88B /* SceneDelegate.swift */,
+				322DB10F27A160C3001D45B5 /* AppDelegate.swift */,
+				322DD55C27A54EAC00C7E88B /* Coordinator */,
 				322DD55427A5292E00C7E88B /* Modules */,
 				322DD53927A3E59A00C7E88B /* Domain */,
 				322DB13F27A160FE001D45B5 /* Data */,
@@ -339,8 +343,18 @@
 		322DD55527A5293600C7E88B /* CreditScore */ = {
 			isa = PBXGroup;
 			children = (
+				322DD55627A52A1100C7E88B /* CreditScoreViewModel.swift */,
+				322DD55827A54E3000C7E88B /* CreditScoreViewController.swift */,
 			);
 			path = CreditScore;
+			sourceTree = "<group>";
+		};
+		322DD55C27A54EAC00C7E88B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				322DD55D27A550C900C7E88B /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,22 +495,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				322DD55E27A550C900C7E88B /* AppCoordinator.swift in Sources */,
 				322DD54B27A3FB6E00C7E88B /* HTTPMethod.swift in Sources */,
 				322DB14A27A162E2001D45B5 /* EndpointType.swift in Sources */,
-				322DB11427A160C3001D45B5 /* ViewController.swift in Sources */,
 				322DB14427A16262001D45B5 /* ServerEnvironment.swift in Sources */,
 				322DB11027A160C3001D45B5 /* AppDelegate.swift in Sources */,
 				322DD54527A3F76300C7E88B /* CreditScore.swift in Sources */,
 				322DD51E27A270F200C7E88B /* CoachingSummaryDTO.swift in Sources */,
-				322DB11227A160C3001D45B5 /* SceneDelegate.swift in Sources */,
 				322DB14227A1623B001D45B5 /* APIClient.swift in Sources */,
+				322DD56027A5531D00C7E88B /* SceneDelegate.swift in Sources */,
 				322DD54927A3F9F300C7E88B /* BaseURL.swift in Sources */,
+				322DD55A27A54E3000C7E88B /* CreditScoreViewController.swift in Sources */,
 				322DD52027A2715200C7E88B /* CreditReportDetailsDTO.swift in Sources */,
 				322DD54727A3F9E000C7E88B /* Endpoint+Extension.swift in Sources */,
 				322DD54227A3F38000C7E88B /* CreditScoreRepositoryType.swift in Sources */,
 				322DD53C27A3E6A200C7E88B /* FetchCreditScoreUseCase.swift in Sources */,
 				322DB14627A16290001D45B5 /* APIError.swift in Sources */,
 				322DD52827A292C100C7E88B /* AppDelegate+Resolver.swift in Sources */,
+				322DD55727A52A1100C7E88B /* CreditScoreViewModel.swift in Sources */,
 				322DB14C27A16309001D45B5 /* ClearScoreEndpoint.swift in Sources */,
 				322DD52327A2725D00C7E88B /* RemoteCreditScoreRepository.swift in Sources */,
 				322DD51C27A270E300C7E88B /* CreditScoreDTO.swift in Sources */,
