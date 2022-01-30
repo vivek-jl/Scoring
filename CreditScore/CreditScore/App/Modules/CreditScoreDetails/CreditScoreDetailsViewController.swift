@@ -23,6 +23,7 @@ class CreditScoreDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.accessibilityIdentifier = "details_view"
         setupViews()
         showData()
     }

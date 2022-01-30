@@ -20,7 +20,16 @@ internal enum L10n {
     internal static let percentageCreditUsed = L10n.tr("Localizable", "Details.percentageCreditUsed")
   }
 
+  internal enum General {
+    /// OK
+    internal static let ok = L10n.tr("Localizable", "General.OK")
+  }
+
   internal enum Home {
+    /// Unable to load credit score at this time. Please try again
+    internal static let errorDetails = L10n.tr("Localizable", "Home.ErrorDetails")
+    /// Error in data
+    internal static let errorTitle = L10n.tr("Localizable", "Home.ErrorTitle")
     /// Dashboard
     internal static let navbarTitle = L10n.tr("Localizable", "Home.NavbarTitle")
     /// out of %d

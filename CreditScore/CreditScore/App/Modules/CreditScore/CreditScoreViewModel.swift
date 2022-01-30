@@ -12,29 +12,27 @@ import Resolver
 final class CreditScoreViewModel: ObservableObject {
     
     @Injected var useCase: FetchCreditScoreUseCaseType
-    @Published var state: CreditScoreViewModel.State = .idle
+    @Published var state: CreditScoreViewModel.State?
     @Published var creditScoreInfo: CreditScoreInfo?
     
     private var subscribers = Set<AnyCancellable>()
 
     enum State: Equatable {
-        case idle
         case loading
-        case loaded
         case fetchComplete(CreditScore)
-        case error(String)
+        case error(String?)
     }
 }
 
 extension CreditScoreViewModel {
     func loadCreditScore() {
+       // state = .loading
         useCase.fetchCreditScore()
             .sink(
                 receiveCompletion: { [weak self] completion in
-                    self?.state = .loaded
                     if case let .failure(error) = completion {
                         self?.state = .error(error.errorDescription)
-                        
+                        print(error.errorDescription)
                     }
                 },
                 receiveValue: { [weak self] score in

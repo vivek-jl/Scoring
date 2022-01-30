@@ -19,24 +19,7 @@ enum APIError: Error, Equatable {
             return
         }
         if let error = error as? DecodingError {
-            var errorToReport = error.localizedDescription
-            switch error {
-            case let .dataCorrupted(context):
-                let details = context.underlyingError?.localizedDescription ?? context.codingPath
-                    .map { $0.stringValue }.joined(separator: ".")
-                errorToReport = "\(context.debugDescription) - (\(details))"
-            case let .keyNotFound(key, context):
-                let details = context.underlyingError?.localizedDescription ?? context.codingPath
-                    .map { $0.stringValue }.joined(separator: ".")
-                errorToReport = "\(context.debugDescription) (key: \(key), \(details))"
-            case let .typeMismatch(type, context), let .valueNotFound(type, context):
-                let details = context.underlyingError?.localizedDescription ?? context.codingPath
-                    .map { $0.stringValue }.joined(separator: ".")
-                errorToReport = "\(context.debugDescription) (type: \(type), \(details))"
-            @unknown default:
-                break
-            }
-            self = APIError.invalidResponse(errorMessage: errorToReport)
+            self = APIError.invalidResponse(errorMessage: error.failureReason ?? error.localizedDescription)
             return
         }
         self = APIError.unknown(errorMessage: error.localizedDescription)

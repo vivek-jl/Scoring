@@ -46,7 +46,6 @@
 		322DD56327A55A0F00C7E88B /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD56227A55A0F00C7E88B /* CircularProgressView.swift */; };
 		322DD56527A55D9F00C7E88B /* TimingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD56427A55D9F00C7E88B /* TimingFunction.swift */; };
 		322DD56827A563A900C7E88B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 322DD56727A563A900C7E88B /* SnapKit */; };
-		322DD56E27A567E100C7E88B /* CreditScoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 322DD56D27A567E100C7E88B /* CreditScoreViewController.xib */; };
 		322DD57127A573F900C7E88B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 322DD57327A573F900C7E88B /* Localizable.strings */; };
 		322DD57527A575CF00C7E88B /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD57427A575CF00C7E88B /* Strings+Generated.swift */; };
 		322DD57727A5797200C7E88B /* Assets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD57627A5797200C7E88B /* Assets+Generated.swift */; };
@@ -55,8 +54,9 @@
 		322DD58527A5AED400C7E88B /* CreditScoreDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD58427A5AED400C7E88B /* CreditScoreDetailsViewModel.swift */; };
 		322DD58727A5C82100C7E88B /* CreditScoreInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD58627A5C82100C7E88B /* CreditScoreInfo.swift */; };
 		322DD58A27A5CC5D00C7E88B /* CreditScoreDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD58827A5CC5D00C7E88B /* CreditScoreDetailsViewController.swift */; };
-		322DD58B27A5CC5D00C7E88B /* CreditScoreDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 322DD58927A5CC5D00C7E88B /* CreditScoreDetailsViewController.xib */; };
 		322DD58D27A5D6CD00C7E88B /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DD58C27A5D6CD00C7E88B /* UIViewController+Extensions.swift */; };
+		322DD58F27A5E81D00C7E88B /* CreditScoreDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 322DD58E27A5E81D00C7E88B /* CreditScoreDetailsViewController.xib */; };
+		322DD59127A5E82700C7E88B /* CreditScoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 322DD59027A5E82700C7E88B /* CreditScoreViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,7 +118,6 @@
 		322DD55D27A550C900C7E88B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		322DD56227A55A0F00C7E88B /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		322DD56427A55D9F00C7E88B /* TimingFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimingFunction.swift; sourceTree = "<group>"; };
-		322DD56D27A567E100C7E88B /* CreditScoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditScoreViewController.xib; sourceTree = "<group>"; };
 		322DD57227A573F900C7E88B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		322DD57427A575CF00C7E88B /* Strings+Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		322DD57627A5797200C7E88B /* Assets+Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assets+Generated.swift"; sourceTree = "<group>"; };
@@ -127,8 +126,9 @@
 		322DD58427A5AED400C7E88B /* CreditScoreDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScoreDetailsViewModel.swift; sourceTree = "<group>"; };
 		322DD58627A5C82100C7E88B /* CreditScoreInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScoreInfo.swift; sourceTree = "<group>"; };
 		322DD58827A5CC5D00C7E88B /* CreditScoreDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScoreDetailsViewController.swift; sourceTree = "<group>"; };
-		322DD58927A5CC5D00C7E88B /* CreditScoreDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditScoreDetailsViewController.xib; sourceTree = "<group>"; };
 		322DD58C27A5D6CD00C7E88B /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		322DD58E27A5E81D00C7E88B /* CreditScoreDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditScoreDetailsViewController.xib; sourceTree = "<group>"; };
+		322DD59027A5E82700C7E88B /* CreditScoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditScoreViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,9 +359,9 @@
 		322DD55527A5293600C7E88B /* CreditScore */ = {
 			isa = PBXGroup;
 			children = (
+				322DD59027A5E82700C7E88B /* CreditScoreViewController.xib */,
 				322DD55627A52A1100C7E88B /* CreditScoreViewModel.swift */,
 				322DD55827A54E3000C7E88B /* CreditScoreViewController.swift */,
-				322DD56D27A567E100C7E88B /* CreditScoreViewController.xib */,
 			);
 			path = CreditScore;
 			sourceTree = "<group>";
@@ -417,9 +417,9 @@
 		322DD58327A5ADB600C7E88B /* CreditScoreDetails */ = {
 			isa = PBXGroup;
 			children = (
+				322DD58E27A5E81D00C7E88B /* CreditScoreDetailsViewController.xib */,
 				322DD58427A5AED400C7E88B /* CreditScoreDetailsViewModel.swift */,
 				322DD58827A5CC5D00C7E88B /* CreditScoreDetailsViewController.swift */,
-				322DD58927A5CC5D00C7E88B /* CreditScoreDetailsViewController.xib */,
 			);
 			path = CreditScoreDetails;
 			sourceTree = "<group>";
@@ -536,10 +536,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				322DD59127A5E82700C7E88B /* CreditScoreViewController.xib in Resources */,
 				322DB11C27A160C4001D45B5 /* LaunchScreen.storyboard in Resources */,
-				322DD58B27A5CC5D00C7E88B /* CreditScoreDetailsViewController.xib in Resources */,
+				322DD58F27A5E81D00C7E88B /* CreditScoreDetailsViewController.xib in Resources */,
 				322DD57127A573F900C7E88B /* Localizable.strings in Resources */,
-				322DD56E27A567E100C7E88B /* CreditScoreViewController.xib in Resources */,
 				322DB11927A160C4001D45B5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -787,7 +787,7 @@
 				INFOPLIST_FILE = CreditScore/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -814,7 +814,7 @@
 				INFOPLIST_FILE = CreditScore/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
