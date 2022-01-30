@@ -30,7 +30,7 @@ final class APIClient: APIClientType {
         delegate: nil,
         delegateQueue: nil
     )
-
+    
     required init(
         configuration: URLSessionConfiguration = Resolver.resolve(),
         environment: ServerEnvironment = Resolver.resolve()
@@ -38,11 +38,11 @@ final class APIClient: APIClientType {
         self.sessionConfiguration = configuration
         self.environment = environment
     }
-
+    
     func change(environment: ServerEnvironment) {
         self.environment = environment
     }
-
+    
     func request<T: Decodable>(
         type: T.Type,
         endpoint: EndpointType

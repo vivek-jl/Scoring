@@ -7,8 +7,13 @@
 
 import Foundation
 
-struct CreditScore {
-    let score: Int
-    let minScore: Int
-    let maxScore: Int
+struct CreditScore: Equatable {
+    let score: Double
+    let minScore: Double
+    let maxScore: Double
+    var creditScoreInfo: CreditScoreInfo? = nil
+    
+    var progressScore: Double {
+        return (score / maxScore)
+    }
 }

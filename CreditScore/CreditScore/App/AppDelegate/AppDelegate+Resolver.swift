@@ -13,7 +13,13 @@ extension Resolver: ResolverRegistering {
         defaultScope = .graph
         register { BaseURL() }.implements(BaseURLType.self)
         register { URLSessionConfiguration.default }
-        register { ServerEnvironment.staging }
+        register { ServerEnvironment.production }
+        register { FetchCreditScoreUseCase() }
+        .implements(FetchCreditScoreUseCaseType.self)
+        register { RemoteCreditScoreRepository() }
+        .implements(CreditScoreRepositoryType.self)
         register { APIClient() }.implements(APIClientType.self)
+        register { CreditScoreViewModel() }
+        register { CreditScoreDetailsViewModel() }
     }
 }

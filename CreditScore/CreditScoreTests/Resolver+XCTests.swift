@@ -16,6 +16,8 @@ extension Resolver {
     static func resetUnitTestRegistrations() {
         Resolver.test = Resolver(child: .main)
         Resolver.root = Resolver.test
+        Resolver.test.register { MockFetchCreditScoreUseCase()}
+        .implements(FetchCreditScoreUseCaseType.self)
         Resolver.test.register { MockCreditScoreRepository()}
         .implements(CreditScoreRepositoryType.self)
         Resolver.test.register { BaseURL() }.implements(BaseURLType.self)

@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  CreditScore
+
+  Created by Vivek Jayakumar on 29/1/22.
+  
+*/
+
+"General.OK" = "OK";
+
+"Home.NavbarTitle" = "Dashboard";
+"Home.Title" = "Your Credit Score is";
+"Home.Subtitle" = "out of %d";
+"Home.ErrorTitle" = "Error in data";
+"Home.ErrorDetails" = "Unable to load credit score at this time. Please try again";
+
+"Details.monthsSinceLastDefaulted" = "Months Since Last Defaulted";
+"Details.percentageCreditUsed" = "Percentage Credit Used";
+"Details.currentLongTermDebt" = "Current Long Term Debt";
+
+
